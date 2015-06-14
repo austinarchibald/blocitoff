@@ -5,3 +5,9 @@
     <i><h5>To-doing since <%= @user.created_at.strftime("%B %d, %Y") %></h5></i><br />
     <div class="text-center"><%= link_to 'Edit Profile', edit_user_registration_path, class: 'btn btn-info' %></div>
 </div>
+
+<div class="the-box col-xs-6 col-xs-offset-3">
+  <%= render partial: "items/item" %>
+  <hr>
+  <%= render partial: "items/form" %>
+</div>
