@@ -1,0 +1,7 @@
+<div class="the-box col-xs-6 col-xs-offset-3">
+    <h2>Profile</h2>
+    <h4>Name: <%= @user.name %></h4>
+    <h4>Email: <%= @user.email %></h4>
+    <i><h5>To-doing since <%= @user.created_at.strftime("%B %d, %Y") %></h5></i><br />
+    <div class="text-center"><%= link_to 'Edit Profile', edit_user_registration_path, class: 'btn btn-info' %></div>
+</div>
