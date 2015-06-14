@@ -1,6 +1,4 @@
 <h3>To-Do List</h3>
 <% @items.each do |item| %>
-<ul>
-  <li><%= item.name %> <%= link_to "", [current_user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok', id: "item-#{item.id}" %></li>
-</ul>
+  <%= link_to "", [current_user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok', id: "item-#{item.id}" %> <%= item.name %> <small>(<%= item.days_left %> days left) </small>
 <% end %>
