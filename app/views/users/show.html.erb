@@ -7,7 +7,8 @@
 </div>
 
 <div class="the-box col-xs-6 col-xs-offset-3">
-  <%= render partial: "items/item" %>
+  <h3>To-Do List</h3>
+  <ul class="list-unstyled"><%= render @items %></ul>
   <hr>
   <%= render partial: "items/form" %>
 </div>

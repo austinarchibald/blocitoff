@@ -4,7 +4,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
     @item = current_user.items.build(item_params)
     if @item.save
       redirect_to user_path(current_user)
@@ -14,10 +13,9 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:user_id])
-    @item = @user.items.find(params[:id])
+    @item = current_user.items.find(params[:id])
     if @item.destroy
-      flash[:notice] = "Item removed."
+      flash.now[:notice] = "Item removed."
     else
       flash[:error] = "There was an error removing the item."
     end
