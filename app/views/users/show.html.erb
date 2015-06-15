@@ -8,7 +8,11 @@
 
 <div class="the-box col-xs-6 col-xs-offset-3">
   <h3>To-Do List</h3>
-  <ul class="list-unstyled"><%= render @items %></ul>
+  <div class="js-items">
+    <ul class="list-unstyled"><%= render @items %></ul>
+  </div>
   <hr>
-  <%= render partial: "items/form" %>
+  <div class="new-item">
+    <%= render "items/form" %>
+  </div>
 </div>

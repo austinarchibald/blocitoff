@@ -1,7 +1,7 @@
 <h5>Add a new item:</h5>
 
 <div class="form-group">
-  <%= form_for [@user, @item] do |f| %>
+  <%= form_for [@user, @item], remote: true do |f| %>
     <%= f.text_field :name, :class => 'form-control', placeholder: 'To-do item' %>
 </div>
 

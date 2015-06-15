@@ -5,10 +5,15 @@ class ItemsController < ApplicationController
 
   def create
     @item = current_user.items.build(item_params)
+    @new_item = Item.new
     if @item.save
-      redirect_to user_path(current_user)
+      flash.now[:notice] = "Item added."
     else
       flash[:error] = "There was an error adding the item. Please try again."
+    end
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
