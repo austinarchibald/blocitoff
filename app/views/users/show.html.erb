@@ -8,7 +8,9 @@
 
 <div class="the-box col-xs-6 col-xs-offset-3">
   <h3>To-Do List</h3>
-  <ul class="list-unstyled"><%= render @items %></ul>
+  <ul class="list-unstyled js-items"><%= render @items %></ul>
   <hr>
-  <%= render partial: "items/form" %>
+  <div class="new-item">
+    <%= render partial: 'items/form', locals: { user: @user, item: @item } %>
+  </div>
 </div>
