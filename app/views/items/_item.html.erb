@@ -1,0 +1,5 @@
+<%= content_tag :li, id: "item-#{item.id}" do %>
+  <%= link_to "", [current_user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %> 
+  <%= item.name %> 
+  <small>(<%= item.days_left %> days left) </small>
+<% end %>
